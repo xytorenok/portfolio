@@ -9,6 +9,10 @@ const myDescription = document.querySelector('.hero-description')
 const myProfessionSecond = document.getElementById("hero-profession-2")
 const myDescriptionSecond = document.getElementById("hero-description-2")
 
+
+
+const interactiveScale = document.querySelectorAll(".interactive-block")
+
 //кнопка смены темы
 btnChangeTheme.addEventListener('click', function () {
   //Логика кнопки такова: 
@@ -30,23 +34,25 @@ btnChangeTheme.addEventListener('click', function () {
     document.documentElement.style.setProperty('--color-title', '#EAC566');
     console.log('remove body classes');
   }
+
+
 })
 
 // --------------------------оптимизировать этот код в будующем. ---------------
 myProfession.addEventListener('click', function () {
   console.log('ssss');
   myProfession.classList.toggle('active')
-    myProfessionSecond.classList.toggle('active')
-    myDescription.classList.toggle('active')
-    myDescriptionSecond.classList.toggle('active')
+  myProfessionSecond.classList.toggle('active')
+  myDescription.classList.toggle('active')
+  myDescriptionSecond.classList.toggle('active')
 })
 
 myProfessionSecond.addEventListener('click', function () {
   console.log('ssss');
   myProfession.classList.toggle('active')
-    myProfessionSecond.classList.toggle('active')
-    myDescription.classList.toggle('active')
-    myDescriptionSecond.classList.toggle('active')
+  myProfessionSecond.classList.toggle('active')
+  myDescription.classList.toggle('active')
+  myDescriptionSecond.classList.toggle('active')
 })
 
 // --------------------------оптимизировать этот код в будующем. ---------------
@@ -76,7 +82,7 @@ const removeCLassDescription = setTimeout(() => {
 
 
 const changeCLassActive = setTimeout(() => {
-  if(myProfession.classList.contains('active')){
+  if (myProfession.classList.contains('active')) {
     myProfession.classList.toggle('active')
     myProfessionSecond.classList.toggle('active')
     myDescription.classList.toggle('active')
@@ -115,8 +121,23 @@ $(document).ready(function () {
   })
 });
 
+// интерактивный блок
+interactiveScale.forEach(element => {
+  element.addEventListener("click", function () {
+    element.classList.remove("scale")
+    this.classList.add("scale")
+    
+
+  })
+});
 
 
 
-
-
+// for(let i = 1; i < 100; ){
+//     console.log(i);
+//     continue;
+//   }
+//   for(let i = 1; ; i++){
+//     console.log(i);
+//     continue;
+//   }

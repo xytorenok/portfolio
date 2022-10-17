@@ -602,6 +602,100 @@ projects */
   transition: 0.3s ease-in-out;
 }
 
+/* ------------------------interactive__wrapper------------------- */
+
+.interactive{
+  padding: 75px 0;
+}
+
+.interactive__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.interactive-block {
+  width: 354px;
+  padding: 22px 22px 17px 22px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.interactive-block-center {
+  transform-origin: center;
+  transform: rotate(-10deg);
+}
+
+.interactive-block figcaption p {
+  margin-top: 17px;
+}
+
+/* ----------------------------prices__wrapper--------------- */
+
+.prices{
+  padding: 75px 0;
+}
+
+.prices-title {
+  margin-bottom: 12px;
+}
+
+.prices__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.prices__block {
+  margin-top: 36px;
+  width: 528px;
+}
+
+.prices__list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(167, 167, 167, 0.5);
+}
+
+.prices__list li:first-of-type {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  color: #EBE3CE;
+}
+
+.prices__list li:last-of-type {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #F6DE9D;
+}
+
+.prices__text {
+  margin-top: 24px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #EBE3CE;
+}
+
+/* ------------------about-------------- */
+
+.about{
+  position: relative;
+}
+
+.about-title{
+  position: absolute;
+  top: 60px;
+
+}
+
 /* -------------------------super-team--------------- */
 .super-team {
   padding-top: 75px;
