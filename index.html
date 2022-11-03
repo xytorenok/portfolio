@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <title>Hutorskoi</title>
 </head>
 
@@ -25,6 +26,7 @@
           <li class="menu-item"><a href="" class="menu-link">Contact</a></li>
         </ul>
       </nav>
+      <div class="burger-menu"><span></span><span></span><span></span><span></span></div>
     </div>
   </header>
   <main>
@@ -36,8 +38,9 @@
         <div class="hero__top-block">
           <p class="hero-profession active" id="hero-profession-1">web developer</p>
           <p class="hero-profession" id="hero-profession-2">cntnt creator</p>
-          <p class="hero-description active"  id="hero-description-1">Дайте мені visual studio code та я  rotate цей світ на (360deg). I write my code тільки на ноутбуках DELL</p>
-          <p class="hero-description"  id="hero-description-2">Дайте мені tasks, та я will create диво. 
+          <p class="hero-description active" id="hero-description-1">Дайте мені visual studio code та я rotate цей світ
+            на (360deg). I write my code тільки на ноутбуках DELL</p>
+          <p class="hero-description" id="hero-description-2">Дайте мені tasks, та я will create диво.
             I'm negotiating використовуючи тільки google pixel</p>
         </div>
       </div>
@@ -66,8 +69,22 @@
       </div>
       <div class="photoshoper-content">
         <div class="photoshoper-content-title">(It's me)</div>
-        <div class="photoshoper-content-description">In difficult times, I always supported people. All cases I participated in are successful</div>
+        <div class="photoshoper-content-description">In difficult times, I always supported people. All cases I
+          participated in are successful</div>
         <span class="photoshoper-content-note">these are my friends :-)</span>
+        <span class="photoshoper-arrow-adapt">
+          <!-- <picture> Этот код, работает некоректно
+            <source  srcset="img/photoshoper-arrow-adapt-568.svg 320w,
+                       img/photoshoper-arrow-adapt-768.svg 768w">
+            <img src="img/photoshoper-arrow-adapt-768.svg" alt="">
+          </picture> -->
+          <picture>
+            <source media="(max-width:590px)" srcset="img/photoshoper-arrow-adapt-568.svg">
+            <img src="img/photoshoper-arrow-adapt-768.svg" alt="" style="width:auto;">
+          </picture>
+
+        </span>
+
       </div>
     </div>
 
@@ -89,13 +106,14 @@
       <div class="my-benefits-content">
         <p class="my-benefits-content-title photoshoper-content-title">( I can do that )</p>
         <p class="my-benefits-content-name-of-skill photoshoper-content-description">Clean code</p>
-        <p class="my-benefits-content-description">Are you tired working with 2, 3 or 4 different teams? Conflicts, misunderstanding, too much time spent on communication are</p>
+        <p class="my-benefits-content-description">Are you tired working with 2, 3 or 4 different teams? Conflicts,
+          misunderstanding, too much time spent on communication are</p>
         <span class="my-benefits-content-note ">this is the perfect code</span>
         <div class="common-smile my-benefits-smile"><span></span></div>
       </div>
     </div>
 
-    <section class="advantages container">
+    <!-- <section class="advantages container">
       <p class="advantages__title inner-title ">( My four advantages )</p>
       <div class="advantages__wrapper">
         <div class="advantages__block">
@@ -119,10 +137,10 @@
             and always be ready for actions we plan in advance.</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
-    <section class="projects container">
+    <!-- <section class="projects container">
       <p class="projects-title inner-title">( Projects )</p>
       <div class="projects__wrapper">
         <div class="projects__block">
@@ -147,9 +165,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="interactive container">
+    <!-- <section class="interactive container">
       <p class="interactive-title inner-title">( Interactive )</p>
       <div class="interactive__wrapper">
         <figure class="interactive-block scale">
@@ -171,9 +189,9 @@
           </figcaption>
         </figure>
       </div>
-    </section>
+    </section> -->
 
-    <section class="prices container">
+    <!-- <section class="prices container">
       <p class="prices-title inner-title">( Prices )</p>
 <div class="prices__wrapper">
   <div class="prices__block">
@@ -205,9 +223,9 @@
     <p class="prices__text">Landing on tilde. Suitable for small businesses, professionals or presentations of one product (service), as well as promotional pages</p>
   </div>
 </div>
-    </section>
+    </section> -->
 
-    <section class="about container">
+    <!-- <section class="about container">
       <p class="about-title inner-title">( About me )</p>
       <div class="about__wrapper">
         <div class="about_block"><img src="img/about-photo.jpg" alt=""><span>Yes, that's me.</span></div>
@@ -216,13 +234,13 @@
           <p class="about_block">When we create a project, it will be necessary to briefly describe the essence of the project. At the same time, we will need to leave the meaning for the Overview block.</p>        
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="super-team container">
       <p class="super-team-title inner-title">( Super team )</p>
       <div class="super-team-slider">
         <div class="super-team__block">
-          <div class="super-team__wrapper"> <!--pos rel -->
+          <div class="super-team__wrapper"> 
             <figure class="super-team-img">
               <img src="img/super-team-me.jpg" alt="">
               <figcaption>
@@ -230,7 +248,7 @@
                 <span>Web developer</span>
               </figcaption>
             </figure>
-             <div class="super-team-description"> <!--pos abs -->
+             <div class="super-team-description">
               <p>When we create a project, it will be necessary to briefly describe the essence of the project. At the same time, we will need to leave the meaning for the Overview block.</p>
               <a href="">+380953157995</a>
             </div>
@@ -285,8 +303,8 @@
     </section>
 
   </main>
-  
-  <footer class="footer container">
+
+  <!-- <footer class="footer container">
     <p class="footer-title inner-title common-smile">( Leave a request or write to me to start )<span></span></p>
     <div class="footer__wrapper">
     <div class="footer-block">
@@ -310,7 +328,7 @@
       <a href="" class="footer-block-design-contact" target="_blank">Anastasiia Melnyk</a>
     </div>
   </div>
-  </footer>
+  </footer> -->
 
 
 
