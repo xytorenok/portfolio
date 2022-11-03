@@ -4,6 +4,8 @@
   --color-main: #EBE3CE;
   --color-title: #EAC566;
 
+  --color-body-for-media: #232323;
+
   --ff-monrope: 'Manrope', sans-serif;
   --ff-open-sans: 'Open Sans', sans-serif;
 }
@@ -75,12 +77,20 @@ body {
   font-weight: 400;
 }
 
+body.hidden {
+  overflow-y: hidden;
+}
+
 .bg-green {
   background: #036635;
 }
 
 .bg-blue {
   background: #3F5793
+}
+
+.burger-menu {
+  display: none;
 }
 
 .header {
@@ -289,12 +299,11 @@ photoshoper */
   position: absolute;
   width: 400px;
   height: 480px;
-  top: 0;
-  bottom: 0;
-  left: 15%;
+  left: 50%;
+  top: 50%;
   background-color: #EAEAEA;
   transform-origin: center center;
-  transform: rotate(15deg);
+  transform: translate(-50%, -50%) rotate(15deg);
   z-index: -1;
 }
 
@@ -380,6 +389,10 @@ photoshoper */
   transform: rotate(5deg);
 }
 
+.photoshoper-arrow-adapt {
+  display: none;
+}
+
 /* --------------------------------my-benefits-------------- */
 
 .my-benefits {
@@ -400,26 +413,26 @@ photoshoper */
 .my-benefits-slider::before {
   position: absolute;
   content: '';
-  width: 285px;
+  width: 380px;
   height: 420px;
-  top: 30px;
-  right: 65px;
+  left: 50%;
+    top: 50%;
   background-color: #EAEAEA;
   transform-origin: center center;
-  transform: rotate(15deg);
+  transform: translate(-50%, -50%) rotate(15deg);
   z-index: -1;
 }
 
 .my-benefits-slider::after {
   position: absolute;
   content: '';
-  width: 285px;
+  width: 380px;
   height: 420px;
-  top: 30px;
-  left: 65px;
+  left: 50%;
+    top: 50%;
   background-color: #EAEAEA;
   transform-origin: center center;
-  transform: rotate(-15deg);
+  transform: translate(-50%, -50%) rotate(-15deg);
   z-index: -1;
 }
 
@@ -604,7 +617,7 @@ projects */
 
 /* ------------------------interactive__wrapper------------------- */
 
-.interactive{
+.interactive {
   padding: 75px 0;
 }
 
@@ -630,7 +643,7 @@ projects */
 
 /* ----------------------------prices__wrapper--------------- */
 
-.prices{
+.prices {
   padding: 75px 0;
 }
 
@@ -686,11 +699,11 @@ projects */
 
 /* ------------------about-------------- */
 
-.about{
+.about {
   position: relative;
 }
 
-.about-title{
+.about-title {
   position: absolute;
   top: 60px;
 
