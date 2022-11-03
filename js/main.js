@@ -23,78 +23,90 @@ btnChangeTheme.addEventListener('click', function () {
     body.classList.add('bg-green')
     document.documentElement.style.setProperty('--color-main', '#FFFFFF');
     document.documentElement.style.setProperty('--color-title', '#F79C00');
+    document.documentElement.style.setProperty('--color-body-for-media', '#036635');    
   } else if (body.classList.contains('bg-green')) {
     body.classList.add('bg-blue')
     body.classList.remove('bg-green')
     document.documentElement.style.setProperty('--color-title', '#FEEC48');
+    document.documentElement.style.setProperty('--color-body-for-media', '#3F5793');
   } else if (body.classList.contains('bg-blue')) {
     body.classList.remove('bg-blue')
     myName.classList.remove('white-text')
     document.documentElement.style.setProperty('--color-main', '#EBE3CE');
     document.documentElement.style.setProperty('--color-title', '#EAC566');
-    console.log('remove body classes');
+    document.documentElement.style.setProperty('--color-body-for-media', '#232323');
   }
 
 
 })
 
 // --------------------------оптимизировать этот код в будующем. ---------------
-myProfession.addEventListener('click', function () {
-  console.log('ssss');
-  myProfession.classList.toggle('active')
-  myProfessionSecond.classList.toggle('active')
-  myDescription.classList.toggle('active')
-  myDescriptionSecond.classList.toggle('active')
-})
+function changeJob(){
+  if(!myProfession) return;
+  else{
+    myProfession.addEventListener('click', function () {
+      console.log('ssss');
+      myProfession.classList.toggle('active')
+      myProfessionSecond.classList.toggle('active')
+      myDescription.classList.toggle('active')
+      myDescriptionSecond.classList.toggle('active')
+    })
+    
+    myProfessionSecond.addEventListener('click', function () {
+      console.log('ssss');
+      myProfession.classList.toggle('active')
+      myProfessionSecond.classList.toggle('active')
+      myDescription.classList.toggle('active')
+      myDescriptionSecond.classList.toggle('active')
+    })
+  }
+}
 
-myProfessionSecond.addEventListener('click', function () {
-  console.log('ssss');
-  myProfession.classList.toggle('active')
-  myProfessionSecond.classList.toggle('active')
-  myDescription.classList.toggle('active')
-  myDescriptionSecond.classList.toggle('active')
-})
+changeJob()
+
 
 // --------------------------оптимизировать этот код в будующем. ---------------
 
-const addClass = setTimeout(() => {
-  myPhoto.classList.add('moved')
-  myName.classList.add('moved')
-  iAm.classList.add('disappeared')
-  heroTopBlock.classList.add('centered')
-  myDescription.classList.add('disappeared')
+// const addClass = setTimeout(() => {
+//   myPhoto.classList.add('moved')
+//   myName.classList.add('moved')
+//   iAm.classList.add('disappeared')
+//   heroTopBlock.classList.add('centered')
+//   myDescription.classList.add('disappeared')
 
-}, 1000)
-
-
-const removeCLass = setTimeout(() => {
-  myPhoto.classList.remove('moved')
-  myName.classList.remove('moved')
-  iAm.classList.remove('disappeared')
-  heroTopBlock.classList.remove('centered')
-
-}, 3500)
-
-const removeCLassDescription = setTimeout(() => {
-  myDescription.classList.remove('disappeared')
-
-}, 3750)
+// }, 1000)
 
 
-const changeCLassActive = setTimeout(() => {
-  if (myProfession.classList.contains('active')) {
-    myProfession.classList.toggle('active')
-    myProfessionSecond.classList.toggle('active')
-    myDescription.classList.toggle('active')
-    myDescriptionSecond.classList.toggle('active')
-  }
+// const removeCLass = setTimeout(() => {
+//   myPhoto.classList.remove('moved')
+//   myName.classList.remove('moved')
+//   iAm.classList.remove('disappeared')
+//   heroTopBlock.classList.remove('centered')
 
-}, 5500)
+// }, 3500)
+
+// const removeCLassDescription = setTimeout(() => {
+//   myDescription.classList.remove('disappeared')
+
+// }, 3750)
+
+
+// const changeCLassActive = setTimeout(() => {
+//   if (myProfession.classList.contains('active')) {
+//     myProfession.classList.toggle('active')
+//     myProfessionSecond.classList.toggle('active')
+//     myDescription.classList.toggle('active')
+//     myDescriptionSecond.classList.toggle('active')
+//   }
+
+// }, 5500)
+
+// Jquary-block---------------------------------------------
 
 $(document).ready(function () {
   $(".photoshoper-slider").slick({
     infinity: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1100,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -104,7 +116,7 @@ $(document).ready(function () {
 
   $(".my-benefits-slider").slick({
     infinity: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -119,7 +131,16 @@ $(document).ready(function () {
     arrows: false,
     dots: true
   })
+
+  $('.burger-menu').click(function(){
+    $('.burger-menu span').toggleClass('active')    
+    $('.nav').toggleClass('active')   
+    $('body').toggleClass('hidden')   
+  })
 });
+
+// Jquary-block--end----------------------------------------
+
 
 // интерактивный блок
 interactiveScale.forEach(element => {
