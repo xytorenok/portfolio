@@ -8,6 +8,9 @@
 
   --ff-monrope: 'Manrope', sans-serif;
   --ff-open-sans: 'Open Sans', sans-serif;
+
+  --padding-of-section: 0px; 
+
 }
 
 
@@ -59,6 +62,7 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 var(--padding-of-section);
 }
 
 .inner-title {
@@ -88,6 +92,8 @@ body.hidden {
 .bg-blue {
   background: #3F5793
 }
+
+/* -------------------------------Надстройки------------------ */
 
 .burger-menu {
   display: none;
@@ -522,6 +528,7 @@ advantages - section
 .advantages__wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .advantages__block {
@@ -537,6 +544,10 @@ advantages - section
   font-size: 40px;
   line-height: 52px;
   color: var(--color-main);
+}
+
+.advantages__block-title span{
+  display: block;
 }
 
 .advantages__block-text {
@@ -558,13 +569,21 @@ projects */
 
 .projects__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  column-gap: 24px;
 }
 
-.projects__block:last-child {
-  margin-top: 40px;
+.projects__block:nth-child(1){
+  
+}
 
+.projects__block:nth-child(2){
+
+}
+
+.projects__block:nth-child(3) {
+  margin-top: 40px;
 }
 
 .projects__block-info {

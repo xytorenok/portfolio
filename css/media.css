@@ -1,5 +1,9 @@
 @media(max-width: 1250px) {
 
+  :root {
+    --padding-of-section: 32px;
+  }
+
   .header {
     padding: 40px 32px 84px;
   }
@@ -29,7 +33,28 @@
     padding: 75px 10px;
   }
 
+  .advantages__wrapper {
+    gap: 39px;
+  }
+
+  .advantages__block {
+    width: 45%;
+  }
+
+  .advantages__block-title span{
+    display: inline-block;
+  }
+
 }
+
+@media(max-width: 1250px) {
+  .projects__block:nth-child(3) {
+    /* margin: 40px auto 0;
+    width: 558px; */
+  }
+
+}
+
 
 @media(max-width: 1150px) {
 
@@ -39,7 +64,6 @@
     gap: 63px;
     flex-direction: column-reverse;
     align-items: center;
-    padding: 0 10px;
   }
 
   .photoshoper-content {
@@ -72,10 +96,26 @@
 
 @media(max-width: 980px) {
 
+  .inner-title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
   .hero-profession {
     font-size: 50px;
     line-height: 60px;
   }
+
+  .advantages__block-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .advantages__block-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
 
 }
 
@@ -254,6 +294,10 @@
     height: 390px;
   }
 
+  .advantages__block {
+    width: 100%;
+}
+
 }
 
 @media(max-width: 450px) {
@@ -270,7 +314,7 @@
     align-content: flex-start;
     gap: 10px;
     align-items: flex-end;
-    width: 64%;
+    width: 80%;
   }
 
   .hero-title-hello {

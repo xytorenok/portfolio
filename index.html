@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon//favicon-16x16.png">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
@@ -46,8 +48,9 @@
       </div>
     </div>
 
-    <div class="photoshoper container photoshoper-wrapper">
-      <div class="photoshoper-slider">
+    <section class="photoshoper">
+      <div class="photoshoper-wrapper container">
+        <div class="photoshoper-slider">
         <div class="slider-block">
           <figure class="slider-img"><img src="img/photoshoper-zelenskii.jpg" alt=""></figure>
         </div>
@@ -79,16 +82,21 @@
             <img src="img/photoshoper-arrow-adapt-768.svg" alt="">
           </picture> -->
           <picture>
-            <source media="(max-width:590px)" srcset="img/photoshoper-arrow-adapt-568.svg">
+            <source media="(max-width:768px)" srcset="img/photoshoper-arrow-adapt-568.svg">
             <img src="img/photoshoper-arrow-adapt-768.svg" alt="" style="width:auto;">
           </picture>
 
         </span>
 
       </div>
-    </div>
+      </div>
+      
+    </section>
 
-    <div class="my-benefits container my-benefits-wrapper">
+    <!-- Section has no sense on that time. 
+    Секция потеряла смысл, временно отключаю её -->
+
+    <!-- <div class="my-benefits container my-benefits-wrapper">
       <div class="my-benefits-slider">
         <div class="slider-block">
           <figure class="slider-img"><img src="img/my-benefits-apple.jpg" alt=""></figure>
@@ -111,9 +119,9 @@
         <span class="my-benefits-content-note ">this is the perfect code</span>
         <div class="common-smile my-benefits-smile"><span></span></div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- <section class="advantages container">
+    <section class="advantages container">
       <p class="advantages__title inner-title ">( My four advantages )</p>
       <div class="advantages__wrapper">
         <div class="advantages__block">
@@ -127,45 +135,46 @@
             and actions that should be taken on time.</p>
         </div>
         <div class="advantages__block">
-          <p class="advantages__block-title">Soft <br>skills.</p>
+          <p class="advantages__block-title">Soft <span>skills.</span></p>
           <p class="advantages__block-text">Working on one project for long-term period helps us to automate the process
             and always be ready for actions we plan in advance.</p>
         </div>
         <div class="advantages__block">
-          <p class="advantages__block-title">Just a <br>good man.</p>
+          <p class="advantages__block-title">Just a <span>good man.</span></p>
           <p class="advantages__block-text">Working on one project for long-term period helps us to automate the process
             and always be ready for actions we plan in advance.</p>
         </div>
       </div>
-    </section> -->
+    </section>
 
 
-    <!-- <section class="projects container">
+    <section class="projects container">
       <p class="projects-title inner-title">( Projects )</p>
       <div class="projects__wrapper">
         <div class="projects__block">
-          <projects__block-img><img src="img/projects-photo-ear.jpg" alt=""></projects__block-img>
+          <div class="projects__block-img"><img src="img/projects-photo-ear.jpg" alt=""></div>
           <div class="projects__block-info">
             <p class="projects__block-info-name">Файний слух</p>
             <a href="" class="projects__block-info-link">View case</a>
           </div>
         </div>
         <div class="projects__block">
-          <projects__block-img><img src="img/projects-photo-gym.jpg" alt=""></projects__block-img>
+          <div class="projects__block-img"><img src="img/projects-photo-gym.jpg" alt=""></div>
           <div class="projects__block-info">
             <p class="projects__block-info-name">King’s Gym</p>
             <a href="" class="projects__block-info-link">View case</a>
           </div>
         </div>
-        <div class="projects__block">
-          <projects__block-img><img src="img/projects-photo-build.jpg" alt=""></projects__block-img>
-          <div class="projects__block-info">
-            <p class="projects__block-info-name">WISHBONE+PARTNERS</p>
-            <a href="" class="projects__block-info-link">View case</a>
-          </div>
+      </div>
+
+      <div class="projects__block">
+        <div class="projects__block-img"><img src="img/projects-photo-build.jpg" alt=""></div>
+        <div class="projects__block-info">
+          <p class="projects__block-info-name">WISHBONE+PARTNERS</p>
+          <a href="" class="projects__block-info-link">View case</a>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- <section class="interactive container">
       <p class="interactive-title inner-title">( Interactive )</p>
