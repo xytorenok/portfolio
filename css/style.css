@@ -176,7 +176,7 @@ body.hidden {
 } */
 
 .hero-img {
-  background: url(/img/hero-my-photo3.png) no-repeat center;
+  background: url(../img/hero-my-photo3.png) no-repeat center;
   position: absolute;
   left: 47%;
   top: 0;
@@ -188,11 +188,11 @@ body.hidden {
 }
 
 .bg-green .hero-img {
-  background: url(/img/hero-my-photo.png) no-repeat center;
+  background: url(../img/hero-my-photo.png) no-repeat center;
 }
 
 .bg-blue .hero-img {
-  background: url(/img/hero-my-photo2.png) no-repeat center;
+  background: url(../img/hero-my-photo2.png) no-repeat center;
 }
 
 .hero-img.moved {
