@@ -9,7 +9,12 @@
   --ff-monrope: 'Manrope', sans-serif;
   --ff-open-sans: 'Open Sans', sans-serif;
 
-  --padding-of-section: 0px; 
+  --padding-of-section: 0px;
+
+  --colour-for-button-1: rgba(3, 102, 53, 1);
+  --colour-for-button-2: rgba(63, 87, 147, 1);
+  --colour-for-button-3: rgba(35, 35, 35, 1);
+
 
 }
 
@@ -75,7 +80,7 @@ a {
 }
 
 body {
-  background-color: #232323;
+  background: linear-gradient(90deg, var(--colour-for-button-1) 0%, var(--colour-for-button-2) 50%, var(--colour-for-button-3) 100%);
   color: var(--color-main);
   font-family: var(--ff-open-sans);
   font-weight: 400;
@@ -86,11 +91,11 @@ body.hidden {
 }
 
 .bg-green {
-  background: #036635;
+  background: linear-gradient(90deg, var(--colour-for-button-1) 0%, var(--colour-for-button-2) 50%, var(--colour-for-button-3) 100%);
 }
 
 .bg-blue {
-  background: #3F5793
+  background: linear-gradient(90deg, var(--colour-for-button-1) 0%, var(--colour-for-button-2) 50%, var(--colour-for-button-3) 100%);
 }
 
 /* -------------------------------Надстройки------------------ */
@@ -129,13 +134,14 @@ body.hidden {
 .btn-toggle-theme {
   width: 137px;
   padding: 7px 0;
-  border: 1px solid var(--color-main);
+  /* border: 1px solid var(--color-main); */
   color: var(--color-main);
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  background: linear-gradient(90deg, var(--colour-for-button-1) 0%, var(--colour-for-button-2) 50%, var(--colour-for-button-3) 100%);
 }
 
 .menu {
@@ -170,13 +176,23 @@ body.hidden {
 } */
 
 .hero-img {
+  background: url(/img/hero-my-photo3.png) no-repeat center;
   position: absolute;
   left: 47%;
   top: 0;
   width: 182px;
+  height: 300px;
   z-index: -1;
   transform: translate(-50%, 0);
   transition: 0.3s ease-in-out;
+}
+
+.bg-green .hero-img {
+  background: url(/img/hero-my-photo.png) no-repeat center;
+}
+
+.bg-blue .hero-img {
+  background: url(/img/hero-my-photo2.png) no-repeat center;
 }
 
 .hero-img.moved {
@@ -290,7 +306,6 @@ photoshoper */
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .photoshoper-slider {
@@ -422,7 +437,7 @@ photoshoper */
   width: 380px;
   height: 420px;
   left: 50%;
-    top: 50%;
+  top: 50%;
   background-color: #EAEAEA;
   transform-origin: center center;
   transform: translate(-50%, -50%) rotate(15deg);
@@ -435,7 +450,7 @@ photoshoper */
   width: 380px;
   height: 420px;
   left: 50%;
-    top: 50%;
+  top: 50%;
   background-color: #EAEAEA;
   transform-origin: center center;
   transform: translate(-50%, -50%) rotate(-15deg);
@@ -546,7 +561,7 @@ advantages - section
   color: var(--color-main);
 }
 
-.advantages__block-title span{
+.advantages__block-title span {
   display: block;
 }
 
@@ -574,19 +589,15 @@ projects */
   column-gap: 24px;
 }
 
-.projects__block:nth-child(1){
-  
-}
+.projects__block:nth-child(1) {}
 
-.projects__block:nth-child(2){
-
-}
+.projects__block:nth-child(2) {}
 
 .projects__block:nth-child(3) {
   margin-top: 40px;
 }
 
-.projects__block-info {
+/* .projects__block-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -632,7 +643,7 @@ projects */
   top: 30%;
   transform: translateY(-50%);
   transition: 0.3s ease-in-out;
-}
+} */
 
 /* ------------------------interactive__wrapper------------------- */
 
@@ -663,7 +674,8 @@ projects */
 /* ----------------------------prices__wrapper--------------- */
 
 .prices {
-  padding: 75px 0;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .prices-title {
@@ -678,12 +690,13 @@ projects */
 
 .prices__block {
   margin-top: 36px;
-  width: 528px;
+  max-width: 528px;
 }
 
 .prices__list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(167, 167, 167, 0.5);
 }
@@ -899,4 +912,22 @@ projects */
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+.slider-img {
+  position: relative;
+}
+
+.slider-text {
+  opacity: 0;
+  position: absolute;
+  background: linear-gradient(90deg, var(--colour-for-button-1) 0%, var(--colour-for-button-2) 50%, var(--colour-for-button-3) 100%);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 15px;
+  line-height: 18px;
+
 }

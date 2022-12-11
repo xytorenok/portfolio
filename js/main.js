@@ -23,18 +23,28 @@ btnChangeTheme.addEventListener('click', function () {
     body.classList.add('bg-green')
     document.documentElement.style.setProperty('--color-main', '#FFFFFF');
     document.documentElement.style.setProperty('--color-title', '#F79C00');
-    document.documentElement.style.setProperty('--color-body-for-media', '#036635');    
+    document.documentElement.style.setProperty('--color-body-for-media', '#036635'); 
+    document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(255,0,0,1)');
+    document.documentElement.style.setProperty('--colour-for-button-2', 'rgba(63,87,147,1)');
+    document.documentElement.style.setProperty('--colour-for-button-3', 'rgba(35,35,35,1)');
   } else if (body.classList.contains('bg-green')) {
     body.classList.add('bg-blue')
     body.classList.remove('bg-green')
     document.documentElement.style.setProperty('--color-title', '#FEEC48');
     document.documentElement.style.setProperty('--color-body-for-media', '#3F5793');
+    document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(3,102,53,1)'); 
+    document.documentElement.style.setProperty('--colour-for-button-2', 'rgba(255,0,40,0.9)');
+    document.documentElement.style.setProperty('--colour-for-button-3', 'rgba(35,35,35,1)');
   } else if (body.classList.contains('bg-blue')) {
     body.classList.remove('bg-blue')
     myName.classList.remove('white-text')
     document.documentElement.style.setProperty('--color-main', '#EBE3CE');
     document.documentElement.style.setProperty('--color-title', '#EAC566');
     document.documentElement.style.setProperty('--color-body-for-media', '#232323');
+    document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(3,102,53,1)'); 
+    document.documentElement.style.setProperty('--colour-for-button-2', 'rgba(63,87,147,1)');
+    document.documentElement.style.setProperty('--colour-for-button-3', 'rgba(255,0,0,0.9)');
+
   }
 
 
@@ -67,39 +77,39 @@ changeJob()
 
 // --------------------------оптимизировать этот код в будующем. ---------------
 
-// const addClass = setTimeout(() => {
-//   myPhoto.classList.add('moved')
-//   myName.classList.add('moved')
-//   iAm.classList.add('disappeared')
-//   heroTopBlock.classList.add('centered')
-//   myDescription.classList.add('disappeared')
+const addClass = setTimeout(() => {
+  myPhoto.classList.add('moved')
+  myName.classList.add('moved')
+  iAm.classList.add('disappeared')
+  heroTopBlock.classList.add('centered')
+  myDescription.classList.add('disappeared')
 
-// }, 1000)
-
-
-// const removeCLass = setTimeout(() => {
-//   myPhoto.classList.remove('moved')
-//   myName.classList.remove('moved')
-//   iAm.classList.remove('disappeared')
-//   heroTopBlock.classList.remove('centered')
-
-// }, 3500)
-
-// const removeCLassDescription = setTimeout(() => {
-//   myDescription.classList.remove('disappeared')
-
-// }, 3750)
+}, 1000)
 
 
-// const changeCLassActive = setTimeout(() => {
-//   if (myProfession.classList.contains('active')) {
-//     myProfession.classList.toggle('active')
-//     myProfessionSecond.classList.toggle('active')
-//     myDescription.classList.toggle('active')
-//     myDescriptionSecond.classList.toggle('active')
-//   }
+const removeCLass = setTimeout(() => {
+  myPhoto.classList.remove('moved')
+  myName.classList.remove('moved')
+  iAm.classList.remove('disappeared')
+  heroTopBlock.classList.remove('centered')
 
-// }, 5500)
+}, 3500)
+
+const removeCLassDescription = setTimeout(() => {
+  myDescription.classList.remove('disappeared')
+
+}, 3750)
+
+
+const changeCLassActive = setTimeout(() => {
+  if (myProfession.classList.contains('active')) {
+    myProfession.classList.toggle('active')
+    myProfessionSecond.classList.toggle('active')
+    myDescription.classList.toggle('active')
+    myDescriptionSecond.classList.toggle('active')
+  }
+
+}, 5500)
 
 // Jquary-block---------------------------------------------
 

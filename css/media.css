@@ -29,6 +29,16 @@
     font-size: 18px;
   }
 
+  .photoshoper-content {
+    width: 500px;
+  }
+
+  .photoshoper-content-description {
+    margin-top: 25px;
+    font-size: 32px;
+    line-height: 42px;
+  }
+
   .my-benefits {
     padding: 75px 10px;
   }
@@ -41,9 +51,13 @@
     width: 45%;
   }
 
-  .advantages__block-title span{
+  .advantages__block-title span {
     display: inline-block;
   }
+
+  .super-team__wrapper {
+    width: 333px;
+    height: 336px;
 
 }
 
@@ -58,12 +72,30 @@
 
 @media(max-width: 1150px) {
 
-  .photoshoper-wrapper {
+  .bg-green .photoshoper-content {
+    background: transparent;
+  }
+
+  /* .photoshoper-wrapper {
     display: flex;
     justify-content: center;
     gap: 63px;
     flex-direction: column-reverse;
     align-items: center;
+  } */
+
+  .photoshoper-slider {
+    width: 350px;
+  }
+
+  .photoshoper-slider::before {
+    width: 300px;
+    height: 370px;
+    left: 50%;
+  }
+
+  .photoshoper .slider-img {
+    width: 300px;
   }
 
   .photoshoper-content {
@@ -73,10 +105,6 @@
   .photoshoper-arrow-adapt {
     display: block;
     margin-top: 45px;
-  }
-
-  .photoshoper-content-note {
-    bottom: 60px;
   }
 
   .my-benefits-wrapper {
@@ -91,10 +119,26 @@
     display: none;
   }
 
+  .super-team__wrapper {
+    width: 293px;
+    height: 296px;
+
+}
+
 
 }
 
 @media(max-width: 980px) {
+
+  .photoshoper-content {
+    width: 400px;
+  }
+
+  .photoshoper-content-note {
+    font-size: 18px;
+    line-height: 20px;
+    width: 218px;
+  }
 
   .inner-title {
     font-size: 32px;
@@ -123,6 +167,26 @@
 
   .hero__title .name {
     font-size: 70px;
+  }
+
+  .photoshoper-slider {
+    width: 270px;
+  }
+
+  .photoshoper-slider::before {
+    width: 250px;
+    height: 300px;
+    left: 50%;
+    top: 43%;
+  }
+
+  .photoshoper .slider-img {
+    width: 250px;
+  }
+
+  .photoshoper-content-description {
+    font-size: 28px;
+    line-height: 38px;
   }
 
 }
@@ -180,6 +244,10 @@
     transform: translateY(-50%) rotate(-45deg);
   }
 
+  .header {
+    padding-bottom: 50px;
+  }
+
   .header .nav {
     position: absolute;
     top: 158px;
@@ -207,7 +275,7 @@
     top: 0;
     bottom: 0;
     z-index: 999;
-    background-color: var(--color-body-for-media);
+    background: linear-gradient(90deg, var(--colour-for-button-1) 0%, var(--colour-for-button-2) 50%, var(--colour-for-button-3) 100%);
   }
 
   .header .menu-item {
@@ -234,19 +302,87 @@
     transform: translateY(-50%) rotate(0deg);
   }
 
-  .photoshoper-content-description {
-    font-size: 32px;
-    line-height: 41px;
+  .hero__top-block {
+    justify-content: space-around;
   }
 
+  .hero-title-hello.disappeared {
+    margin-top: 16px;
+    margin-left: 56px;
+  }
+
+  .hero-description {
+    width: 210px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .photoshoper-wrapper {
+    justify-content: center;
+  }
+
+  .photoshoper-content {
+    display: none;
+  }
+
+  .photoshoper-slider {
+    width: 370px;
+  }
+
+  .photoshoper-slider::before {
+    width: 350px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+  }
+
+  .photoshoper .slider-img {
+    width: 350px;
+  }
+
+  .photoshoper .slider-text {
+    opacity: 1;
+  }
+
+  .projects__wrapper {
+    align-items: center;
+    row-gap: 40px;
+    flex-direction: column;
+  }
 
 }
 
 @media(max-width: 590px) {
+
+  .header {
+    position: relative;
+    padding: 40px 0 50px;
+  }
+
+  .header-left {
+    width: auto;
+  }
+
+  .header-logo {
+    display: none;
+  }
+
+  /* .btn-toggle-theme {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  } */
+
   .hero__top-block {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .hero__top-block.centered {
+    margin-top: -101px;
+    margin-left: 0px;
   }
 
   .hero__top {
@@ -257,6 +393,17 @@
     gap: 40px;
   }
 
+  .hero__title.moved {
+    gap: 40px;
+    color: crimson;
+    opacity: 0;
+  }
+
+  .hero-title-hello.disappeared {
+    margin-top: 16px;
+    margin-left: 30px;
+  }
+
   .photoshoper-content {
     width: 100%;
   }
@@ -265,7 +412,7 @@
     word-break: break-all;
   }
 
-  .photoshoper .slider-img,
+  /* .photoshoper .slider-img,
   .my-benefits .slider-img {
     width: 320px;
   }
@@ -277,7 +424,7 @@
 
   .photoshoper-slider {
     width: 100%;
-  }
+  } */
 
   .my-benefits-content {
     width: 100%;
@@ -296,9 +443,11 @@
 
   .advantages__block {
     width: 100%;
-}
+  }
 
 }
+
+/* ------450---------450-------------450------------------450----------------450-------------450--------- */
 
 @media(max-width: 450px) {
 
@@ -314,7 +463,7 @@
     align-content: flex-start;
     gap: 10px;
     align-items: flex-end;
-    width: 80%;
+    width: 65%;
   }
 
   .hero-title-hello {
@@ -326,10 +475,14 @@
     width: 230px;
   }
 
-  .hero-description {
+  /* .hero-description {
     font-size: 16px;
     width: 270px;
     line-height: 20px;
+  } */
+
+  .photoshoper .container {
+    padding: 0;
   }
 
   .photoshoper-content {
@@ -344,15 +497,35 @@
     bottom: 31%;
   }
 
-  .photoshoper .slider-img,
-  .my-benefits .slider-img {
-    width: 250px;
+  .photoshoper-slider {
+    width: 290px;
   }
 
   .photoshoper-slider::before {
+    width: 270px;
+    height: 335px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(2deg);
+  }
+
+  .photoshoper .slider-img {
+    width: 270px;
+  }
+
+  .photoshoper .slider-text {
+    font-size: 11px;
+  }
+
+  /* .photoshoper .slider-img,
+  .my-benefits .slider-img {
+    width: 250px;
+  } */
+
+  /* .photoshoper-slider::before {
     width: 240px;
     height: 290px;
-  }
+  } */
 
   .my-benefits-slider::after {
     display: none;
@@ -370,4 +543,28 @@
     transform: translate(-50%, -50%) rotate(-15deg);
     z-index: -1;
   }
+
+  .prices__list li:first-of-type {
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .prices__list li:last-of-type {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@media(max-width: 380px) {
+  .hero__title .name {
+    font-size: 40px;
+  }
+
+  .hero-profession {
+    margin-top: 25px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+
 }
