@@ -23,7 +23,7 @@ btnChangeTheme.addEventListener('click', function () {
     body.classList.add('bg-green')
     document.documentElement.style.setProperty('--color-main', '#FFFFFF');
     document.documentElement.style.setProperty('--color-title', '#F79C00');
-    document.documentElement.style.setProperty('--color-body-for-media', '#036635'); 
+    document.documentElement.style.setProperty('--color-body-for-media', '#036635');
     document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(255,0,0,1)');
     document.documentElement.style.setProperty('--colour-for-button-2', 'rgba(63,87,147,1)');
     document.documentElement.style.setProperty('--colour-for-button-3', 'rgba(35,35,35,1)');
@@ -32,7 +32,7 @@ btnChangeTheme.addEventListener('click', function () {
     body.classList.remove('bg-green')
     document.documentElement.style.setProperty('--color-title', '#FEEC48');
     document.documentElement.style.setProperty('--color-body-for-media', '#3F5793');
-    document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(3,102,53,1)'); 
+    document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(3,102,53,1)');
     document.documentElement.style.setProperty('--colour-for-button-2', 'rgba(255,0,40,0.9)');
     document.documentElement.style.setProperty('--colour-for-button-3', 'rgba(35,35,35,1)');
   } else if (body.classList.contains('bg-blue')) {
@@ -41,7 +41,7 @@ btnChangeTheme.addEventListener('click', function () {
     document.documentElement.style.setProperty('--color-main', '#EBE3CE');
     document.documentElement.style.setProperty('--color-title', '#EAC566');
     document.documentElement.style.setProperty('--color-body-for-media', '#232323');
-    document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(3,102,53,1)'); 
+    document.documentElement.style.setProperty('--colour-for-button-1', 'rgba(3,102,53,1)');
     document.documentElement.style.setProperty('--colour-for-button-2', 'rgba(63,87,147,1)');
     document.documentElement.style.setProperty('--colour-for-button-3', 'rgba(255,0,0,0.9)');
 
@@ -51,9 +51,9 @@ btnChangeTheme.addEventListener('click', function () {
 })
 
 // --------------------------оптимизировать этот код в будующем. ---------------
-function changeJob(){
-  if(!myProfession) return;
-  else{
+function changeJob() {
+  if (!myProfession) return;
+  else {
     myProfession.addEventListener('click', function () {
       console.log('ssss');
       myProfession.classList.toggle('active')
@@ -61,7 +61,7 @@ function changeJob(){
       myDescription.classList.toggle('active')
       myDescriptionSecond.classList.toggle('active')
     })
-    
+
     myProfessionSecond.addEventListener('click', function () {
       console.log('ssss');
       myProfession.classList.toggle('active')
@@ -135,17 +135,40 @@ $(document).ready(function () {
   });
 
   $('.super-team-slider').slick({
+    // autoplay: true,
+    // autoplaySpeed: 2000,
     infinity: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
-    dots: true
+    dots: true,
+    responsive: [{
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        variableWidth: false,
+        dots: true
+      }
+    },
+      {
+        breakpoint: 591,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        infinite: true,
+        variableWidth: false,
+        dots: true
+        }
+      }
+    ]
   })
 
-  $('.burger-menu').click(function(){
-    $('.burger-menu span').toggleClass('active')    
-    $('.nav').toggleClass('active')   
-    $('body').toggleClass('hidden')   
+  $('.burger-menu').click(function () {
+    $('.burger-menu span').toggleClass('active')
+    $('.nav').toggleClass('active')
+    $('body').toggleClass('hidden')
   })
 });
 
@@ -157,7 +180,7 @@ interactiveScale.forEach(element => {
   element.addEventListener("click", function () {
     element.classList.remove("scale")
     this.classList.add("scale")
-    
+
 
   })
 });
