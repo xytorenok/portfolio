@@ -807,6 +807,7 @@ projects */
 
 .footer {
   padding-top: 60px;
+  padding-bottom: 60px;
   font-size: 24px;
   line-height: 31px;
 }
@@ -818,6 +819,10 @@ projects */
   padding-right: 71px;
   font-size: 50px;
   line-height: 65px;
+}
+
+.footer-block-time span{
+  display: block;
 }
 
 .common-smile span {
@@ -842,21 +847,25 @@ projects */
 
 .footer-block-title {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
   color: #BEBEBE;
 }
 
+.fbt{
+  margin-top: 10px;
+}
+
 .footer-block-name {
   width: 116px;
 }
 
-.footer-block-item a {
+/* .footer-block-item a {
   text-decoration-line: underline;
   text-underline-offset: 6px;
-}
+} */
 
 .footer-block-item:not(:last-child) {
   margin-bottom: 16px;
