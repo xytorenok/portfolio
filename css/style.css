@@ -27,6 +27,8 @@
 font-family: 'Manrope', sans-serif;
 font-family: 'Open Sans', sans-serif; */
 
+
+
 *,
 *::before,
 *::after {
@@ -88,6 +90,7 @@ body {
   color: var(--color-main);
   font-family: var(--ff-open-sans);
   font-weight: 400;
+  scroll-behavior: smooth !important;
 }
 
 body.hidden {

@@ -185,6 +185,42 @@ interactiveScale.forEach(element => {
   })
 });
 
+// -----------------------------smooth-scrolling------------------------
+
+// const links = document.querySelectorAll("a[href^='#'")
+
+// const section = document.querySelectorAll("body section")
+
+// links.forEach(link => {
+// link.addEventListener('click', function(e) {
+//   e.preventDefault()
+//   let href = this.getAttribute('href').substring(1);
+//   const scrollTarget = document.getElementById(href)
+//   const topOfSet = document.querySelector(".menu").offsetHeight;
+//   const positionElement = scrollTarget.getBoundingClientRect().top;
+//   const offsetPosition = positionElement - topOfSet
+
+//   window.scrollBy({
+//     top: offsetPosition,
+//     behavior: "smooth"
+//   })
+// })
+// })
+
+
+// const smoothLinks = document.querySelectorAll('a[href^="#"]');
+// for (let smoothLink of smoothLinks) {
+//     smoothLink.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         const id = smoothLink.getAttribute('href');
+
+//         document.querySelector(id).scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'start'
+//         });
+//     });
+// };
+
 
 
 // for(let i = 1; i < 100; ){
