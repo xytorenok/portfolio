@@ -13,6 +13,38 @@ const myDescriptionSecond = document.getElementById("hero-description-2")
 
 const interactiveScale = document.querySelectorAll(".interactive-block")
 
+const links = document.querySelectorAll(".nav a")
+
+links.forEach( link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault()
+    
+    setTimeout(() => location.href = link.href, 1000)
+  })
+})
+
+// links.addEventListener('click', function () {
+//   setTimeout(() => {
+//     console.log('window.location');
+//     window.location = "#cases"
+  
+//   }, 1000)
+  
+// })
+
+// const linkFooter = document.getElementById("linkFooter")
+
+// linkFooter.addEventListener('click', function (event) {
+//   event.preventDefault()
+  
+
+//   setTimeout(() => location.href = linkFooter.href, 1000)
+// })
+
+
+
+
+
 //кнопка смены темы
 btnChangeTheme.addEventListener('click', function () {
   //Логика кнопки такова: 
@@ -169,6 +201,15 @@ $(document).ready(function () {
     $('.burger-menu span').toggleClass('active')
     $('.nav').toggleClass('active')
     $('body').toggleClass('hidden')
+  })
+
+ 
+
+
+  $('.nav a').click(function () {
+    $('.burger-menu span').removeClass('active')
+    $('.nav').removeClass('active')
+    $('body').removeClass('hidden')
   })
 });
 
