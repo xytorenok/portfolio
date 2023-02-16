@@ -19,7 +19,7 @@ links.forEach( link => {
   link.addEventListener('click', function (event) {
     event.preventDefault()
     
-    setTimeout(() => location.href = link.href, 1000)
+    setTimeout(() => location.href = link.href, 1)
   })
 })
 
